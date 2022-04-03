@@ -1,6 +1,6 @@
-import locale
+from locale import setlocale, currency, LC_MONETARY
 
-locale.setlocale(locale.LC_MONETARY, 'pt_BR.UTF-8')
+setlocale(LC_MONETARY, 'pt_BR.UTF-8')
 
 interestPerDay = 0.1
 mulct = 3
@@ -15,7 +15,7 @@ def valorPagamento(value: float, delayedDays: int):
   total = value + mulctValue + interestValue
   installmentValueToPayReport.append(total)
   installmentQuantityReport.append(delayedDays)
-  return locale.currency(total)
+  return currency(total)
 
 while True:
   try:
@@ -32,4 +32,4 @@ while True:
 print(F'''
 Relatório do dia
 Quantidade de parcelas pagas: {sum(installmentQuantityReport)}
-Valor total de prestações pagas: {locale.currency(sum(installmentValueToPayReport))}''')
+Valor total de prestações pagas: {currency(sum(installmentValueToPayReport))}''')

@@ -18,4 +18,3 @@ if average >= 7:
     print('Aprovado')
 else:
   print('Reprovado')
-
