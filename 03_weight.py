@@ -9,6 +9,7 @@ while True:
 
 mensIdealWeight = (72.7 * height) - 58
 womensIdealWeight = (62.1 * height) - 44.7
+
 print('Peso ideal')
 print('Para homens:', '{:.2f}kg'.format(mensIdealWeight))
 print('Para mulheres:', '{:.2f}kg'.format(womensIdealWeight))
